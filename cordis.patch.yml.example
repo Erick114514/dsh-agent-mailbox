@@ -1,0 +1,15 @@
+# Install row for the `web` profile user layer.
+# Copy agent-hub.plugin.mjs next to this file, i.e. into
+#   <DSH_HOME>/profiles/web/
+# then append this block to <DSH_HOME>/profiles/web/cordis.patch.yml and restart
+# DeepSeek Harness. The row-level inject list is required so Cordis activates the
+# plugin only after the host `fs` and `tools` services exist.
+
+- insert:
+    - id: agent-hub
+      name: ./agent-hub.plugin.mjs
+      inject:
+        - fs
+        - tools
+      config:
+        hubRoot: 'C:\Users\<you>\.agent-hub'
