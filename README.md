@@ -1,4 +1,4 @@
-# dsh-agent-hub
+# dsh-agent-mailbox
 
 A DeepSeek Harness host plugin that registers Agent Hub mailbox tools process-wide,
 so every DSH agent session can talk to other agents through one shared file mailbox:
